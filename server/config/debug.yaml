@@ -1,0 +1,56 @@
+# 基本服务配置
+server:
+  port: 8000
+  readTimeout: 60
+  writeTimeout: 60
+  jwtSecret: MARKET.MONITOR.SECRET
+  jwtExpire: 24
+  prefixUrl: http://127.0.0.1:8000
+  staticRootPath: public/
+  uploadImagePath: upload/img/
+  imageFormats:
+    - .jpg
+    - .jpeg
+    - .png
+  uploadLimit: 20
+
+# 数据库配置
+database:
+  dbType: mysql
+  host: 127.0.0.1
+  port: 3306
+  user: root
+  password: 123456
+  dbName: obituary
+  tablePrefix:
+  debug: true
+
+# redis 配置
+redis:
+  host: 127.0.0.1:6379
+  port: 6379
+  password:
+  db: 1
+  maxIdle: 30
+  maxActive: 30
+  idleTimeout: 200
+
+# pika 配置
+pika:
+  host: 127.0.0.1:6379
+  port: 6379
+  password:
+  db: 1
+  maxIdle: 30
+  maxActive: 30
+  idleTimeout: 200
+
+# 日志 配置
+logger:
+  level: INFO
+  pretty: true
+  color: true
+  console: false
+  debugLogPath: /data/logs/gin-vue-obituary-admin/debug
+  infoLogPath: /data/logs/gin-vue-obituary-admin/info
+  errorLogPath: /data/logs/gin-vue-obituary-admin/error
